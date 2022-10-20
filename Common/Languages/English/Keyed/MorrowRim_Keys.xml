@@ -4,5 +4,7 @@
     xsi:noNamespaceSchemaLocation="XSD_FILE_PATH">
 	
 	<MorrowRim_ObtainedAlbinoSpiderPod>The albino spider corpse wasn't completely destroyed, which has left an undamaged albino spider pod.</MorrowRim_ObtainedAlbinoSpiderPod>
-	
+	<MorrowRim_SpiderSpawner_Tooltip>Batches remaining: {0}\nTime until next batch spawns: {1}</MorrowRim_SpiderSpawner_Tooltip>
+	<MorrowRim_SpiderSpawner_Spawned>A batch of {0} {1} has hatched</MorrowRim_SpiderSpawner_Spawned>
+	<MorrowRim_SpiderSpawner_Depleted>An {} has depleted its batches, and has been destroyed in the process.</MorrowRim_SpiderSpawner_Depleted>
 </LanguageData>

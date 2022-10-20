@@ -44,7 +44,7 @@
 			<predator>true</predator>
 			<maxPreyBodySize>1.0</maxPreyBodySize>
 			<foodType>CarnivoreAnimalStrict</foodType>
-			<wildness>1.0</wildness>
+			<wildness>0.95</wildness>
 			<lifeExpectancy>10</lifeExpectancy>
 			<lifeStageAges>
 				<li>

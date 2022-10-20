@@ -69,12 +69,13 @@
     <Compile Include="ThingClasses\AlbinoSpiderNestSpawner.cs" />
     <Compile Include="ThingClasses\Building_TrapSpider.cs" />
     <Compile Include="ThingClasses\Projectile_Spider.cs" />
+    <Compile Include="ThingComps\Comp_SpiderSpawner.cs" />
+    <Compile Include="ThingComps\Properties\CompProperties_SpiderSpawner.cs" />
     <Compile Include="Utility\AlbinoSpiderNestUtility.cs" />
     <Compile Include="Utility\AlbinoSpiderUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HediffComps\Properties\" />
-    <Folder Include="ThingComps\Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

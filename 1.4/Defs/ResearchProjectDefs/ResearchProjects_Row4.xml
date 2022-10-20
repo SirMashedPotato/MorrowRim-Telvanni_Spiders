@@ -25,7 +25,7 @@
 	<ResearchProjectDef ParentName="BaseTelvanniResearch_Spider">
 		<defName>MorrowRim_SpiderAdvanced</defName>
 		<label>albino spider studies Vol. III</label>
-		<description>Allows the construction of mind control and chemfuel spider pods.\n\nAdditionally, the chances of obtaining an albino spider pod after killing an albino spider is increased by 10%.</description>
+		<description>Allows the construction of mind control and chemfuel spider pods, as well as the albino spider egg sac.\n\nAdditionally, the chances of obtaining an albino spider pod after killing an albino spider is increased by 10%.</description>
 		<researchViewX>2.00</researchViewX>
 		<researchViewY>3.0</researchViewY>
 		<prerequisites>
