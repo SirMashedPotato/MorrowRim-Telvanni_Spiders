@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MorrowRim_BaseElementalSpider">
+    <defName>MorrowRim_ElementalSpiderGrave</defName>
+    <label>grave imbued spider</label>
+    <description>An albino spider that has been imbued with grave extract. The bites of this spider cause armor corrosion equal to 5% of damage dealt, and upon death the corpse explodes, releasing a corroding gas cloud.</description>
+    <modExtensions>
+		<li Class="MorrowRim_Telvanni.SpiderProperties">
+			<damageAmount>0</damageAmount>
+			<soundDef>MorrowRim_Impact_TelvanniSpider</soundDef>
+			<damageDef>Stun</damageDef>
+			<thingToSpawnDef>Telvanni_Gas_StaveGrave</thingToSpawnDef>
+		</li>
+	</modExtensions>
+	<tools>
+      <li>
+        <label>chelicerae</label>
+        <capacities>
+          <li>MorrowRim_StabGrave</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+		<extraMeleeDamages>
+		</extraMeleeDamages>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="MorrowRim_ElementalSpiderKindBase">
+    <defName>MorrowRim_ElementalSpiderGrave</defName>
+    <label>grave imbued spider</label>
+    <race>MorrowRim_ElementalSpiderGrave</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+		  <color>(155,137,106)</color>
+          <texPath>Things/Pawn/Animal/MorrowRim_ImbuedSpider/MorrowRim_ImbuedSpider</texPath>
+          <drawSize>0.6</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MorrowRim_AlbinoSpider/MorrowRim_Dessicated_AlbinoSpider_east</texPath>
+          <drawSize>0.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+		  <color>(155,137,106)</color>
+          <texPath>Things/Pawn/Animal/MorrowRim_ImbuedSpider/MorrowRim_ImbuedSpider</texPath>
+          <drawSize>0.85</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MorrowRim_AlbinoSpider/MorrowRim_Dessicated_AlbinoSpider_east</texPath>
+          <drawSize>0.85</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+		  <color>(155,137,106)</color>
+          <texPath>Things/Pawn/Animal/MorrowRim_ImbuedSpider/MorrowRim_ImbuedSpider</texPath>
+          <drawSize>1.0</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.3, 0.2)</volume>
+            <offset>(0,0,0)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/MorrowRim_AlbinoSpider/MorrowRim_Dessicated_AlbinoSpider_east</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+ 
+ 
+</Defs>

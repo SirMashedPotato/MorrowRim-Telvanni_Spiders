@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Plants -->
+	
+	<ThingDef ParentName="Telvanni_ExoticPlantBase">
+		<defName>Telvanni_SpiderLily</defName>
+		<label>albino spider lily</label>
+		<description>A genetically engineered flowering plant, created by Great House Telvanni. The plant slowly draws nutrients from the earth, which eventually forms into a single albino spider pod.\n\nThe spider lily is notoriously difficult to grow, requiring highly fertile soil and skilled hands. Even if one manages to succesfully sow the plant, they are highly fragile, and difficult to harvest.</description>
+		<blockWind>false</blockWind>
+		<graphicData>
+		  <texPath>Things/Plant/MorrowRim_SpiderLily</texPath>
+		  <graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MaxHitPoints>25</MaxHitPoints>
+		</statBases>
+		<ingestible>
+		  <foodType>Plant</foodType>
+		</ingestible>
+		<plant>
+		  <harvestedThingDef>MorrowRim_AlbinoSpiderPod</harvestedThingDef>
+		  <immatureGraphicPath>Things/Plant_Immature/MorrowRim_SpiderLily</immatureGraphicPath>
+		  <visualSizeRange>1.0~1.5</visualSizeRange>
+		  <harvestYield>1</harvestYield>
+		  <fertilityMin>1.1</fertilityMin>
+		  <sowMinSkill>12</sowMinSkill>
+		  <blockAdjacentSow>false</blockAdjacentSow>
+		  <harvestWork>400</harvestWork>
+		</plant>
+	</ThingDef>
+
+</Defs>

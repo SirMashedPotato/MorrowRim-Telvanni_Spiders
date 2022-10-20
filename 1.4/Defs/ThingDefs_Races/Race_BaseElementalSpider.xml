@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef Abstract="True" ParentName="AnimalThingBase" Name="MorrowRim_BaseAlbinoSpider">
+		<statBases>
+			<ToxicResistance>1</ToxicResistance>
+			<ComfyTemperatureMax>60</ComfyTemperatureMax>
+		</statBases>
+		<race>
+			<fleshType>Insectoid</fleshType>
+			<bloodDef>Filth_BloodInsect</bloodDef>
+			<meatColor>(160,168,139)</meatColor>
+			<meatMarketValue>0.5</meatMarketValue>
+			<foodType>OmnivoreAnimal, AnimalProduct</foodType>
+			<manhunterOnDamageChance>0.50</manhunterOnDamageChance>
+		</race>
+		<ingredient>
+			<mergeCompatibilityTags>
+				<li MayRequire="Ludeon.RimWorld.Ideology">InsectMeat</li>
+			</mergeCompatibilityTags>
+		</ingredient>
+		<comps>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="MorrowRim_BaseAlbinoSpider" Name="MorrowRim_BaseElementalSpider" Abstract="True">
+		<statBases>
+			<MoveSpeed>3.75</MoveSpeed>
+			<ComfyTemperatureMin>0</ComfyTemperatureMin>
+			<MarketValue>100</MarketValue>
+			<LeatherAmount>0</LeatherAmount>
+			<Flammability>1.2</Flammability>
+		</statBases>
+		<uiIconScale>1</uiIconScale>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.1</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<deathActionWorkerClass>MorrowRim_TelvanniSpiders.DeathActionWorker_ElementalSpider</deathActionWorkerClass>
+			<body>MorrowRim_SpiderLike</body>
+			<baseBodySize>0.2</baseBodySize>
+			<baseHungerRate>0.10</baseHungerRate>
+			<baseHealthScale>0.8</baseHealthScale>
+			<foodType>CarnivoreAnimalStrict</foodType>
+			<useMeatFrom>Megaspider</useMeatFrom>
+			<wildness>1.0</wildness>
+			<lifeExpectancy>10</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectLarva</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectJuvenile</def>
+					<minAge>0.03</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>0.4</minAge>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>AnimalInsect</li>
+		</tradeTags>
+	</ThingDef>
+	<PawnKindDef ParentName="AnimalKindBase" Name="MorrowRim_ElementalSpiderKindBase" Abstract="True">
+		<combatPower>40</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.15</ecoSystemWeight>
+	</PawnKindDef>
+</Defs>

@@ -1,0 +1,4 @@
+J:\Modding\Github\MorrowRim-Telvanni_Spiders\1.4\Assemblies\MorrowRim_TelvanniSpiders.dll
+J:\Modding\Github\MorrowRim-Telvanni_Spiders\1.4\Source\MorrowRim_TelvanniSpiders\MorrowRim_TelvanniSpiders\obj\Debug\MorrowRim_TelvanniSpiders.csproj.AssemblyReference.cache
+J:\Modding\Github\MorrowRim-Telvanni_Spiders\1.4\Source\MorrowRim_TelvanniSpiders\MorrowRim_TelvanniSpiders\obj\Debug\MorrowRim_TelvanniSpiders.csproj.CoreCompileInputs.cache
+J:\Modding\Github\MorrowRim-Telvanni_Spiders\1.4\Source\MorrowRim_TelvanniSpiders\MorrowRim_TelvanniSpiders\obj\Debug\MorrowRim_TelvanniSpiders.dll

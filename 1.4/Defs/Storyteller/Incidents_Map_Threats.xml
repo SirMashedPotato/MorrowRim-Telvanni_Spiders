@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<IncidentDef>
+		<defName>MorrowRim_AlbinoSpiderInfestation</defName>
+		<label>albino spider nest awakens</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MorrowRim_TelvanniSpiders.IncidentWorker_AlbinoSpiderInfestation</workerClass>
+		<letterLabel>Spider nest awakens</letterLabel>
+		<letterText>Recent seismic activity has awoken a hibernating nest of albino spiders, they are now emerging from the ground nearby.\n\nDue to their long slumber they will likely be highly aggressive. Killing them may yield albino spider pods.</letterText>
+		<letterDef>ThreatSmall</letterDef>
+		<baseChance>2.0</baseChance>
+		<minRefireDays>20</minRefireDays>
+		<category>ThreatSmall</category>
+		<pointsScaleable>true</pointsScaleable>
+		<tale>MorrowRim_TelvanniSpiders</tale>
+	</IncidentDef>
+</Defs>

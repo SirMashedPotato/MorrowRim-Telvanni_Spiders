@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ResearchProjectDef Abstract="True" Name="BaseTelvanniResearch_Spider" ParentName="BaseTelvanniResearch">
+		<baseCost>800</baseCost>
+	</ResearchProjectDef>
+</Defs>

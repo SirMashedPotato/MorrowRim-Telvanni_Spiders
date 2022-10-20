@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>MorrowRim_AlbinoSpiderNestSpawner</defName>
+		<label>albino spider tunnel</label>
+		<thingClass>MorrowRim_TelvanniSpiders.AlbinoSpiderNestSpawner</thingClass>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<alwaysFlee>true</alwaysFlee>
+	</ThingDef>
+</Defs>

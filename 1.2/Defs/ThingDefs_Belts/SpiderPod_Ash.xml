@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="Telvanni_BaseBeltSpiderPod">
+		<defName>MorrowRim_SpiderPodAsh</defName>
+		<label>ash spider pod</label>
+		<description>A small spider pod that attaches to the belt, and can be used to throw spiders at the target location. Doing so will use spiders from the pod, which can be refuelled using ash salts.\n\nThe spiders from this pod have a chance of stunning targets, and will explode upon death, releasing disorientating burst.</description>
+		<descriptionHyperlinks><ThingDef>MorrowRim_ElementalSpiderAsh</ThingDef></descriptionHyperlinks>
+		<graphicData>
+			<color>(109,105,85)</color>
+		</graphicData>
+		<costList>
+		  <MorrowRim_AlbinoSpiderPod>1</MorrowRim_AlbinoSpiderPod>
+		  <Dagoth_AshSalts>50</Dagoth_AshSalts>
+		</costList>
+		<verbs>
+		  <li>
+			<label>throw ash spider</label>
+			<verbClass>Verb_LaunchProjectileStatic</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<onlyManualCast>True</onlyManualCast>
+			<range>6.9</range>
+			<forcedMissRadius>1.9</forcedMissRadius>
+			<warmupTime>1.5</warmupTime>
+			<noiseRadius>4</noiseRadius>
+			<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+			<targetParams>
+			  <canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<defaultProjectile>MorrowRim_ThrownAshSpider</defaultProjectile>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		  </li>
+		</verbs>
+		<comps>
+		  <li Class="CompProperties_Reloadable">
+			<maxCharges>3</maxCharges>
+			<ammoDef>Dagoth_AshSalts</ammoDef>
+			<ammoCountPerCharge>15</ammoCountPerCharge>
+			<baseReloadTicks>60</baseReloadTicks>
+			<soundReload>Standard_Reload</soundReload>
+			<hotKey>Misc4</hotKey>
+			<chargeNoun>spider</chargeNoun>
+			<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MorrowRim_BaseSpiderThrown">
+		<defName>MorrowRim_ThrownAshSpider</defName>
+		<label>thrown ash spider</label>
+		<graphicData>
+			<color>(109,105,85)</color>
+		</graphicData>
+		<modExtensions>
+			<li Class="MorrowRim_Telvanni.CreateAtProperties">
+                <pawnKindToSpawn>MorrowRim_ElementalSpiderAsh</pawnKindToSpawn>
+            </li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="Telvanni_BaseBeltSpiderPod">
+		<defName>MorrowRim_SpiderPodMindControl</defName>
+		<label>mind control spider pod</label>
+		<description>A small spider pod that attaches to the belt, and can be used to throw spiders at the target location. Doing so will use spiders from the pod, which can be refuelled using aetherial salts.\n\nMind control spiders have incredibly short lifespans, and will die within a short period of time if they are unable to find a host. Hitting a target with a mind control spider will cause them to enter an enraged state.</description>
+		<descriptionHyperlinks><ThingDef>MorrowRim_ElementalSpiderMindControl</ThingDef></descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Equipment/MorrowRim_MindControlSpiderPodBelt</texPath>
+		</graphicData>
+		<costList>
+		  <MorrowRim_AlbinoSpiderPod>1</MorrowRim_AlbinoSpiderPod>
+		  <MorrowRim_AetherialSalts>50</MorrowRim_AetherialSalts>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisites Inherit="False">
+				<li>MorrowRim_SpiderAdvanced</li>
+			</researchPrerequisites>
+		</recipeMaker>
+		<verbs>
+		  <li>
+			<label>throw mind control spider</label>
+			<verbClass>Verb_LaunchProjectileStatic</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<onlyManualCast>True</onlyManualCast>
+			<range>6.9</range>
+			<forcedMissRadius>1.9</forcedMissRadius>
+			<warmupTime>1.5</warmupTime>
+			<noiseRadius>4</noiseRadius>
+			<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+			<soundCast>ThrowMolotovCocktail</soundCast>
+			<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+			<targetParams>
+			  <canTargetLocations>false</canTargetLocations>
+			</targetParams>
+			<defaultProjectile>MorrowRim_ThrownMindControlSpider</defaultProjectile>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		  </li>
+		</verbs>
+		<comps>
+		  <li Class="CompProperties_Reloadable">
+			<maxCharges>6</maxCharges>
+			<ammoDef>MorrowRim_AetherialSalts</ammoDef>
+			<ammoCountPerCharge>15</ammoCountPerCharge>
+			<baseReloadTicks>60</baseReloadTicks>
+			<soundReload>Standard_Reload</soundReload>
+			<hotKey>Misc4</hotKey>
+			<chargeNoun>spider</chargeNoun>
+			<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MorrowRim_BaseSpiderThrown">
+		<defName>MorrowRim_ThrownMindControlSpider</defName>
+		<label>thrown mind control spider</label>
+		<graphicData>
+			<color>(156,225,232)</color>
+		</graphicData>
+		<modExtensions>
+			<li Class="MorrowRim_Telvanni.CreateAtProperties">
+                <pawnKindToSpawn>MorrowRim_ElementalSpiderMindControl</pawnKindToSpawn>
+            </li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Base -->
+
+  <ThingDef Name="MorrowRim_TrapSpiderBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>MorrowRim_Telvanni.Building_TrapSpider</thingClass>
+    <graphicData>
+	  <texPath>Things/Building/Security/MorrowRim_AlbinoSpiderMine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(1.5,1.5)</drawSize>
+      <damageData>
+        <rect>(0.1,0,0.8,0.3)</rect>
+      </damageData>
+    </graphicData>
+	<designatorDropdown>MorrowRim_AlbinoSpiderTrap</designatorDropdown>
+    <uiIconOffset>(0,-0.14)</uiIconOffset>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <stealable>false</stealable>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <Mass>2</Mass>
+      <MaxHitPoints>40</MaxHitPoints>
+      <WorkToBuild>1400</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Beauty>-4</Beauty>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+    <designationCategory>Security</designationCategory>
+    <building>
+      <isTrap>true</isTrap>
+      <trapPeacefulWildAnimalsSpringChanceFactor>0.15</trapPeacefulWildAnimalsSpringChanceFactor>
+      <expandHomeArea>false</expandHomeArea>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>MorrowRim_SpiderTraps</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_NeverAdjacentTrap</li>
+    </placeWorkers>
+  </ThingDef>
+  
+  <!-- Specifics -->
+  
+  <ThingDef ParentName="MorrowRim_TrapSpiderBase">
+    <defName>MorrowRim_TrapSpiderAsh</defName>
+    <label>ash spider trap</label>
+    <description>A set of ash imbued spider pods, connected to a sensory root mass. The pods hatch when the roots are disturbed, releasing three ash imbued spiders.\n\nSince it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <descriptionHyperlinks><ThingDef>MorrowRim_ElementalSpiderAsh</ThingDef></descriptionHyperlinks>
+	<graphicData>
+      <color>(109,105,85)</color>
+    </graphicData>
+    <costList>
+      <MorrowRim_SpiderPodAsh>1</MorrowRim_SpiderPodAsh>
+    </costList>
+    <designationHotKey>Misc7</designationHotKey>
+    <comps>
+    </comps>
+	<modExtensions>
+		<li Class="MorrowRim_Telvanni.CreateAtProperties">
+			<pawnKindToSpawn>MorrowRim_ElementalSpiderAsh</pawnKindToSpawn>
+			<numberToSpawn>3</numberToSpawn>
+		</li>
+	</modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="MorrowRim_TrapSpiderBase">
+    <defName>MorrowRim_TrapSpiderFire</defName>
+    <label>fire spider trap</label>
+    <description>A set of fire imbued spider pods, connected to a sensory root mass. The pods hatch when the roots are disturbed, releasing three fire imbued spiders.\n\nSince it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <descriptionHyperlinks><ThingDef>MorrowRim_ElementalSpiderFire</ThingDef></descriptionHyperlinks>
+	<graphicData>
+      <color>(238,139,96)</color>
+    </graphicData>
+    <costList>
+      <MorrowRim_SpiderPodFire>1</MorrowRim_SpiderPodFire>
+    </costList>
+    <designationHotKey>Misc7</designationHotKey>
+    <comps>
+    </comps>
+	<modExtensions>
+		<li Class="MorrowRim_Telvanni.CreateAtProperties">
+			<pawnKindToSpawn>MorrowRim_ElementalSpiderFire</pawnKindToSpawn>
+			<numberToSpawn>3</numberToSpawn>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="MorrowRim_TrapSpiderBase">
+    <defName>MorrowRim_TrapSpiderFrost</defName>
+    <label>frost spider trap</label>
+    <description>A set of frost imbued spider pods, connected to a sensory root mass. The pods hatch when the roots are disturbed, releasing three frost imbued spiders.\n\nSince it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <descriptionHyperlinks><ThingDef>MorrowRim_ElementalSpiderFrost</ThingDef></descriptionHyperlinks>
+	<graphicData>
+      <color>(222,239,253)</color>
+    </graphicData>
+    <costList>
+      <MorrowRim_SpiderPodFrost>1</MorrowRim_SpiderPodFrost>
+    </costList>
+    <designationHotKey>Misc7</designationHotKey>
+    <comps>
+    </comps>
+	<modExtensions>
+		<li Class="MorrowRim_Telvanni.CreateAtProperties">
+			<pawnKindToSpawn>MorrowRim_ElementalSpiderFrost</pawnKindToSpawn>
+			<numberToSpawn>3</numberToSpawn>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="MorrowRim_TrapSpiderBase">
+    <defName>MorrowRim_TrapSpiderGrave</defName>
+    <label>grave spider trap</label>
+    <description>A set of grave imbued spider pods, connected to a sensory root mass. The pods hatch when the roots are disturbed, releasing three grave imbued spiders.\n\nSince it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <descriptionHyperlinks><ThingDef>MorrowRim_ElementalSpiderGrave</ThingDef></descriptionHyperlinks>
+	<graphicData>
+      <color>(155,137,106)</color>
+    </graphicData>
+    <costList>
+      <MorrowRim_SpiderPodGrave>1</MorrowRim_SpiderPodGrave>
+    </costList>
+    <designationHotKey>Misc7</designationHotKey>
+    <comps>
+    </comps>
+	<modExtensions>
+		<li Class="MorrowRim_Telvanni.CreateAtProperties">
+			<pawnKindToSpawn>MorrowRim_ElementalSpiderGrave</pawnKindToSpawn>
+			<numberToSpawn>3</numberToSpawn>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="MorrowRim_TrapSpiderBase">
+    <defName>MorrowRim_TrapSpiderParalysis</defName>
+    <label>paralysis spider trap</label>
+    <description>A set of paralysis imbued spider pods, connected to a sensory root mass. The pods hatch when the roots are disturbed, releasing three paralysis imbued spiders.\n\nSince it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <descriptionHyperlinks><ThingDef>MorrowRim_ElementalSpiderParalysis</ThingDef></descriptionHyperlinks>
+	<graphicData>
+      <color>(217,179,43)</color>
+    </graphicData>
+    <costList>
+      <MorrowRim_SpiderPodParalysis>1</MorrowRim_SpiderPodParalysis>
+    </costList>
+    <designationHotKey>Misc7</designationHotKey>
+    <comps>
+    </comps>
+	<modExtensions>
+		<li Class="MorrowRim_Telvanni.CreateAtProperties">
+			<pawnKindToSpawn>MorrowRim_ElementalSpiderParalysis</pawnKindToSpawn>
+			<numberToSpawn>3</numberToSpawn>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="MorrowRim_TrapSpiderBase">
+    <defName>MorrowRim_TrapSpiderStorm</defName>
+    <label>storm spider trap</label>
+    <description>A set of storm imbued spider pods, connected to a sensory root mass. The pods hatch when the roots are disturbed, releasing three storm imbued spiders.\n\nSince it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <descriptionHyperlinks><ThingDef>MorrowRim_ElementalSpiderStorm</ThingDef></descriptionHyperlinks>
+	<graphicData>
+      <color>(146,151,164)</color>
+    </graphicData>
+    <costList>
+      <MorrowRim_SpiderPodStorm>1</MorrowRim_SpiderPodStorm>
+    </costList>
+    <designationHotKey>Misc7</designationHotKey>
+    <comps>
+    </comps>
+	<modExtensions>
+		<li Class="MorrowRim_Telvanni.CreateAtProperties">
+			<pawnKindToSpawn>MorrowRim_ElementalSpiderStorm</pawnKindToSpawn>
+			<numberToSpawn>3</numberToSpawn>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="MorrowRim_TrapSpiderBase">
+    <defName>MorrowRim_TrapSpiderToxin</defName>
+    <label>toxin spider trap</label>
+    <description>A set of toxin imbued spider pods, connected to a sensory root mass. The pods hatch when the roots are disturbed, releasing three toxin imbued spiders.\n\nSince it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <descriptionHyperlinks><ThingDef>MorrowRim_ElementalSpiderToxin</ThingDef></descriptionHyperlinks>
+	<graphicData>
+      <color>(103,22,66)</color>
+    </graphicData>
+    <costList>
+      <MorrowRim_SpiderPodToxin>1</MorrowRim_SpiderPodToxin>
+    </costList>
+    <designationHotKey>Misc7</designationHotKey>
+    <comps>
+    </comps>
+	<modExtensions>
+		<li Class="MorrowRim_Telvanni.CreateAtProperties">
+			<pawnKindToSpawn>MorrowRim_ElementalSpiderToxin</pawnKindToSpawn>
+			<numberToSpawn>3</numberToSpawn>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+  <ThingDef ParentName="MorrowRim_TrapSpiderBase">
+    <defName>MorrowRim_TrapSpiderVampiric</defName>
+    <label>vampiric spider trap</label>
+    <description>A set of vampiric imbued spider pods, connected to a sensory root mass. The pods hatch when the roots are disturbed, releasing three vampiric imbued spiders.\n\nSince it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <descriptionHyperlinks><ThingDef>MorrowRim_ElementalSpiderVampiric</ThingDef></descriptionHyperlinks>
+	<graphicData>
+      <color>(194,31,58)</color>
+    </graphicData>
+    <costList>
+      <MorrowRim_SpiderPodVampiric>1</MorrowRim_SpiderPodVampiric>
+    </costList>
+    <designationHotKey>Misc7</designationHotKey>
+    <comps>
+    </comps>
+	<modExtensions>
+		<li Class="MorrowRim_Telvanni.CreateAtProperties">
+			<pawnKindToSpawn>MorrowRim_ElementalSpiderVampiric</pawnKindToSpawn>
+			<numberToSpawn>3</numberToSpawn>
+		</li>
+	</modExtensions>
+  </ThingDef>
+  
+  <!-- Special -->
+
+</Defs>

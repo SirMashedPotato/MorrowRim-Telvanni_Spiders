@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>SeedsPlease</li>
+    </mods>
+
+    <match Class="PatchOperationSequence">
+
+		<operations>
+
+			<!-- seed defs -->
+			
+			<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+
+						<!-- Exotics -->
+						
+						<SeedsPlease.SeedDef ParentName="SeedBase">
+							<defName>Seed_Telvanni_SpiderLily</defName>
+							<label>spider lily seeds</label>
+							<sources>
+								<li>Telvanni_SpiderLily</li>
+							</sources>
+							<graphicData><texPath>Things/Item/Seeds/Telvanni_SpiderLily</texPath></graphicData>
+						</SeedsPlease.SeedDef>
+
+				</value>
+			</li>
+			
+			<!-- recipe defs -->
+			
+			<li Class="PatchOperationAdd">
+					<xpath>Defs</xpath>
+					<value>
+						
+	
+						<!-- Exotics -->
+						
+						<RecipeDef ParentName="MorrowRim_CreateSeedBase">
+							<defName>MorrowRim_CreateSeed_SpiderLily</defName>
+							<label>create spider lily seeds</label>
+							<description>Create seeds from an albino spider pods and 5 aetherial salts.</description>
+							<ingredients>
+							  <li>
+								<filter>
+								  <thingDefs>
+									<li>MorrowRim_AetherialSalts</li>
+								  </thingDefs>
+								</filter>
+								<count>5</count>
+							  </li>
+							  <li>
+								<filter>
+								  <thingDefs>
+									<li>MorrowRim_AlbinoSpiderPod</li>
+								  </thingDefs>
+								</filter>
+								<count>1</count>
+							  </li>
+							</ingredients>
+							<fixedIngredientFilter>
+							  <thingDefs>
+								<li>MorrowRim_AlbinoSpiderPod</li>
+								<li>MorrowRim_AetherialSalts</li>
+							  </thingDefs>
+							</fixedIngredientFilter>
+							<products>
+							  <Seed_Telvanni_SpiderLily>5</Seed_Telvanni_SpiderLily>
+							</products>
+						</RecipeDef>
+	
+				</value>
+			</li>
+
+		</operations>
+
+    </match>
+  </Operation>
+
+</Patch>

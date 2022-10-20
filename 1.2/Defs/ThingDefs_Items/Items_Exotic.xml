@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ThingDef ParentName="ResourceBase">
+		<defName>MorrowRim_AlbinoSpiderPod</defName>
+		<label>albino spider pod</label>
+		<description>The abdomen of an albino spider, which seems to still contain viable eggs. Rather useless on its own, but when mixed with salts or extracts it can be used to make Telvanni spider pods.</description>
+		<graphicData>
+		  <texPath>Things/Item/Resource/MorrowRim_AlbinoSpiderPods</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		  <drawSize>0.90</drawSize>
+		</graphicData>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<stackLimit>25</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+		  <MarketValue>50</MarketValue>
+		  <MaxHitPoints>50</MaxHitPoints>
+		  <Mass>0.5</Mass>
+		  <Flammability>0.8</Flammability>
+		</statBases>
+		<thingCategories>
+		  <li>Items</li>
+		</thingCategories>
+		<techLevel>Medieval</techLevel>
+		<tradeTags>
+		  <li>TelvanniRare</li>
+		  <li>AshlandExotic</li>
+		  <li>ExoticMisc</li>
+		</tradeTags>
+	</ThingDef>
+  
+</Defs>

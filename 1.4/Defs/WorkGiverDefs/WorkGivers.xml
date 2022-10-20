@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<WorkGiverDef>
+		<defName>MorrowRim_WorkSpiderImbuingTable</defName>
+		<label>work spider imbuing table</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+		<workTags>
+			<li>Intellectual</li>
+		</workTags>
+		<priorityInType>115</priorityInType>
+		<fixedBillGiverDefs>
+			<li>MorrowRim_SpiderImbuingTable</li>
+		</fixedBillGiverDefs>
+		<verb>working spider imbuing chamber</verb>
+		<gerund>crafting energy spider at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+</Defs>

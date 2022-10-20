@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<BodyPartDef>
+		<defName>MorrowRim_Abdomen</defName>
+		<label>abdomen</label>
+		<hitPoints>50</hitPoints>
+		<skinCovered>false</skinCovered>
+		<frostbiteVulnerability>0.5</frostbiteVulnerability>
+	</BodyPartDef>
+	<BodyPartDef>
+		<defName>MorrowRim_Cephalothorax</defName>
+		<label>cephalothorax</label>
+		<hitPoints>60</hitPoints>
+		<skinCovered>false</skinCovered>
+		<frostbiteVulnerability>0.5</frostbiteVulnerability>
+	</BodyPartDef>
+</Defs>

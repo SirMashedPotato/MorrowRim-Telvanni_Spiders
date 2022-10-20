@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="Telvanni_BaseBeltSpiderPod">
+		<defName>MorrowRim_SpiderPodToxin</defName>
+		<label>toxin spider pod</label>
+		<description>A small spider pod that attaches to the belt, and can be used to throw spiders at the target location. Doing so will use spiders from the pod, which can be refuelled using night extract.\n\nThe spiders from this pod cause additional toxic buildup with their attacks, and will explode upon death, releasing a toxic gas cloud.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_ElementalSpiderToxin</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<color>(103,22,66)</color>
+		</graphicData>
+		<costList>
+			<MorrowRim_AlbinoSpiderPod>1</MorrowRim_AlbinoSpiderPod>
+			<MorrowRim_NightCapExtract>50</MorrowRim_NightCapExtract>
+		</costList>
+		<verbs>
+			<li>
+				<label>throw toxin spider</label>
+				<verbClass>Verb_LaunchProjectileStatic</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>6.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<soundCast>ThrowMolotovCocktail</soundCast>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>MorrowRim_ThrownToxinSpider</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_Reloadable">
+				<maxCharges>3</maxCharges>
+				<ammoDef>MorrowRim_NightCapExtract</ammoDef>
+				<ammoCountPerCharge>15</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>spider</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="MorrowRim_BaseSpiderThrown">
+		<defName>MorrowRim_ThrownToxinSpider</defName>
+		<label>thrown toxin spider</label>
+		<graphicData>
+			<color>(103,22,66)</color>
+		</graphicData>
+		<modExtensions>
+			<li Class="MorrowRim_Telvanni.CreateAtProperties">
+				<pawnKindToSpawn>MorrowRim_ElementalSpiderToxin</pawnKindToSpawn>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>

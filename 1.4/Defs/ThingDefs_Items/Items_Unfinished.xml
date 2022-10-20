@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>MorrowRim_UnfinishedSpiderPod</defName>
+		<label>unfinished spider pod</label>
+		<description>An unfinished spider pod.</description>
+		<statBases>
+			<Flammability>0.8</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Item/Unfinished/MorrowRim_AlbinoSpiderPodUnfinished</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stuffCategories Inherit="false"/>
+	</ThingDef>
+</Defs>

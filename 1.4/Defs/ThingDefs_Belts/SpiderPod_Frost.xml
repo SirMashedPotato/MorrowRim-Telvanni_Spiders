@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="Telvanni_BaseBeltSpiderPod">
+		<defName>MorrowRim_SpiderPodFrost</defName>
+		<label>frost spider pod</label>
+		<description>A small spider pod that attaches to the belt, and can be used to throw spiders at the target location. Doing so will use spiders from the pod, which can be refuelled using frost salts.\n\nThe spiders from this pod cause additional hypothermia buildup with their attacks, and will explode upon death, releasing a cloud of freezing air.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_ElementalSpiderFrost</ThingDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<color>(222,239,253)</color>
+		</graphicData>
+		<costList>
+			<MorrowRim_AlbinoSpiderPod>1</MorrowRim_AlbinoSpiderPod>
+			<MorrowRim_FrostSalts>50</MorrowRim_FrostSalts>
+		</costList>
+		<verbs>
+			<li>
+				<label>throw frost spider</label>
+				<verbClass>Verb_LaunchProjectileStatic</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>6.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<soundCast>ThrowMolotovCocktail</soundCast>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>MorrowRim_ThrownFrostSpider</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_Reloadable">
+				<maxCharges>3</maxCharges>
+				<ammoDef>MorrowRim_FrostSalts</ammoDef>
+				<ammoCountPerCharge>15</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<hotKey>Misc4</hotKey>
+				<chargeNoun>spider</chargeNoun>
+				<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="MorrowRim_BaseSpiderThrown">
+		<defName>MorrowRim_ThrownFrostSpider</defName>
+		<label>thrown frost spider</label>
+		<graphicData>
+			<color>(222,239,253)</color>
+		</graphicData>
+		<modExtensions>
+			<li Class="MorrowRim_Telvanni.CreateAtProperties">
+				<pawnKindToSpawn>MorrowRim_ElementalSpiderFrost</pawnKindToSpawn>
+			</li>
+		</modExtensions>
+	</ThingDef>
+</Defs>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<RecordDef>
+		<defName>MorrowRim_TelvanniSpidersThrown</defName>
+		<label>spiders thrown</label>
+		<description>The number of times I have thrown a spider.</description>
+		<type>Int</type>
+	</RecordDef>
+</Defs>

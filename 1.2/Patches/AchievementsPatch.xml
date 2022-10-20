@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Achievements Expanded</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<operations>
+
+
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs</xpath>
+					<value>
+
+						<AchievementsExpanded.AchievementTabDef>
+							<defName>Telvanni_AchievementsTab</defName>
+							<label>Telvanni</label>
+						</AchievementsExpanded.AchievementTabDef>
+						
+						<!-- Rewards -->
+						
+						<AchievementsExpanded.Reward_MapIncident>
+							<defName>MorrowRim_RewardAlibnoSpiderNest</defName>
+							<label>Albino Spider Nest Awakening</label>
+							<tab>Telvanni_AchievementsTab</tab>
+							
+							<cost>25</cost>
+							<incident>MorrowRim_AlbinoSpiderInfestation</incident>
+						</AchievementsExpanded.Reward_MapIncident>
+	
+						<!-- Building -->
+
+						<!-- Crafting -->
+
+						<AchievementsExpanded.AchievementDef> <!-- Uses custom tracker -->
+							<defName>MorrowRim_AchievementTelvanni_CraftSpiderPod</defName>
+							<label>Pocket Spider</label>
+							<description>Create any imbued spider pod, including chemfuel and mind control</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundTelvanni</bgtexPath>
+							<tab>Telvanni_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemCraftTracker_WithDefList">
+								<defList>
+									<li>MorrowRim_SpiderPodAsh</li>
+									<li>MorrowRim_SpiderPodFire</li>
+									<li>MorrowRim_SpiderPodFrost</li>
+									<li>MorrowRim_SpiderPodGrave</li>
+									<li>MorrowRim_SpiderPodParalysis</li>
+									<li>MorrowRim_SpiderPodStorm</li>
+									<li>MorrowRim_SpiderPodToxin</li>
+									<li>MorrowRim_SpiderPodVampiric</li>
+								</defList>
+								<count>1</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementTelvanni_CraftSpiderPod</texPath>
+							<points>10</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!-- Hediffs -->
+
+						<!-- Incidents -->
+
+						<!-- Colonist -->
+		
+						<!-- Items -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementTelvanni_SpiderPods</defName>
+							<label>Spider Enthusiast</label>
+							<description>Obtain 150 albino spider pods</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundTelvanni</bgtexPath>
+							<tab>Telvanni_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ItemTracker">
+								<def>MorrowRim_AlbinoSpiderPod</def>
+								<count>150</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementTelvanni_SpiderPods</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+
+						<!-- Kills -->
+						
+						<!-- Livestock -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementTelvanni_TameSpiders</defName>
+							<label>Spider Buddies</label>
+							<description>Have one of each type of basic imbued spider at the same time</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundTelvanni</bgtexPath>
+							<tab>Telvanni_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.KindDefTracker">
+								<kindDefs>
+									<li>
+										<key>MorrowRim_ElementalSpiderAsh</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>MorrowRim_ElementalSpiderFire</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>MorrowRim_ElementalSpiderFrost</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>MorrowRim_ElementalSpiderGrave</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>MorrowRim_ElementalSpiderParalysis</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>MorrowRim_ElementalSpiderStorm</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>MorrowRim_ElementalSpiderToxin</key>
+										<value>1</value>
+									</li>
+									<li>
+										<key>MorrowRim_ElementalSpiderVampiric</key>
+										<value>1</value>
+									</li>
+								</kindDefs>
+								
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementTelvanni_TameSpiders</texPath>
+							<points>25</points>
+						</AchievementsExpanded.AchievementDef>
+						
+						<!-- Records -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementTelvanni_ReleaseSpiders</defName>
+							<label>Spider Throwing Champion</label>
+							<description>Have a single pawn throw 100 spiders</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundTelvanni</bgtexPath>
+							<tab>Telvanni_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.RecordEventTracker">
+								<def>MorrowRim_TelvanniSpidersThrown</def>
+								<count>100</count>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementTelvanni_ReleaseSpiders</texPath>
+							<points>50</points>
+						</AchievementsExpanded.AchievementDef>
+	
+						<!-- Research -->
+						
+						<AchievementsExpanded.AchievementDef>
+							<defName>MorrowRim_AchievementTelvanni_ResearchSpidersMaster</defName>
+							<label>Master spider Researcher</label>
+							<description>Complete all albino spider research</description>
+							<bgtexPath>Achievements/MorrowRim_AchievementBackgroundTelvanni</bgtexPath>
+							<tab>Telvanni_AchievementsTab</tab>
+							<tracker Class="AchievementsExpanded.ResearchTracker">
+								<def>MorrowRim_SpiderAdvanced</def>
+							</tracker>
+
+							<texPath>Achievements/MorrowRim_AchievementTelvanni_ResearchSpidersMaster</texPath>
+							<points>15</points>
+						</AchievementsExpanded.AchievementDef>
+
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+
+</Patch>
+

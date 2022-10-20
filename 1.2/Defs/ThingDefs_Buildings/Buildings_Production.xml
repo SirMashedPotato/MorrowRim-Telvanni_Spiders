@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="TelvanniBenchBase">
+    <defName>MorrowRim_SpiderImbuingTable</defName>
+    <label>spider imbuing table</label>
+    <description>A workbench equipped for creating imbuing albino spider pods with elemental salts or extracts.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+		  <texPath>Things/Building/Production/MorrowRim_TableSpiderImbuing</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+		  <drawSize>(2,1)</drawSize>
+		  <shadowData>
+			<volume>(2.9, 0.3, 0.5)</volume>
+			<offset>(0, 0, 0)</offset>
+		  </shadowData>
+		  <damageData>
+			<cornerTL>Damage/Corner</cornerTL>
+			<cornerTR>Damage/Corner</cornerTR>
+			<cornerBL>Damage/Corner</cornerBL>
+			<cornerBR>Damage/Corner</cornerBR>
+		  </damageData>
+	</graphicData>
+	<rotatable>false</rotatable>
+    <costList>
+      <MorrowRim_HeartStone>1</MorrowRim_HeartStone>
+      <Steel>50</Steel>
+    </costList>
+	<costStuffCount>50</costStuffCount>
+	<size>(2,1)</size>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>MorrowRim_AlchemyBench</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+	<researchPrerequisites>
+		<li>MorrowRim_SpiderForge</li>
+	</researchPrerequisites>
+  </ThingDef>
+
+</Defs>
