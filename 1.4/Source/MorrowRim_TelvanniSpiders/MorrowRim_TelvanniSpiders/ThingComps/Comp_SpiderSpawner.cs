@@ -98,7 +98,7 @@ namespace MorrowRim_TelvanniSpiders
 
             int numToSpawn = Props.numPerBatch;
             List<Pawn> spiders = new List<Pawn> { };
-            for (int i = 0; i <= numToSpawn; i++)
+            for (int i = 1; i <= numToSpawn; i++)
             {
                 Pawn spider = PawnGenerator.GeneratePawn(Props.kindDef);
                 PawnUtility.TrySpawnHatchedOrBornPawn(spider, parent);

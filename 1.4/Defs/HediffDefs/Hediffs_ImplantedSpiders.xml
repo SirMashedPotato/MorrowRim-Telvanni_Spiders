@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>MorrowRim_ImplantedAlbinoSpiderPod</defName>
+		<label>implanted albino spider pod</label>
+		<labelNoun>an implanted albino spider pod</labelNoun>
+		<description>An albino spider pod that has been implanted into the chest. Several albino spiders will burst out when the host is killed.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_AlbinoSpiderPod</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>MorrowRim_AlbinoSpiderPod</spawnThingOnRemoved>
+		<comps>
+			<li Class="MorrowRim_TelvanniSpiders.HediffCompProperties_SpiderSpawnerOnDeath">
+				<numberRange>3~5</numberRange>
+				<kindDef>MorrowRim_AlbinoSpider</kindDef>
+				<spawnSoundDef>MorrowRim_Impact_TelvanniSpider</spawnSoundDef>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+	</HediffDef>
+	
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>MorrowRim_InstallAlbinoSpiderPod</defName>
+		<label>implant an albino spider pod</label>
+		<description>Implant an albino spider pod.</description>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<descriptionHyperlinks>
+			<ThingDef>MorrowRim_AlbinoSpiderPod</ThingDef>
+			<HediffDef>MorrowRim_ImplantedAlbinoSpiderPod</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Implanting albino spider egg pod.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MorrowRim_AlbinoSpiderPod</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MorrowRim_AlbinoSpiderPod</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Torso</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MorrowRim_ImplantedAlbinoSpiderPod</addsHediff>
+		<researchPrerequisite>MorrowRim_SpiderAdvanced</researchPrerequisite>
+	</RecipeDef>
+</Defs>

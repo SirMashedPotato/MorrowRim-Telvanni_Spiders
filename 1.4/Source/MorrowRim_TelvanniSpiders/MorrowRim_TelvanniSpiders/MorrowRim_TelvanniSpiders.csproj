@@ -64,6 +64,8 @@
     <Compile Include="DefOf\ResearchProjectDefOf.cs" />
     <Compile Include="DefOf\SoundDefOf.cs" />
     <Compile Include="DefOf\ThingDefOf.cs" />
+    <Compile Include="HediffComps\HediffComp_SpiderSpawnerOnDeath.cs" />
+    <Compile Include="HediffComps\Properties\HediffCompProperties_SpiderSpawnerOnDeath.cs" />
     <Compile Include="IncidentWorkers\IncidentWorker_AlbinoSpiderInfestation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThingClasses\AlbinoSpiderNestSpawner.cs" />
@@ -74,8 +76,6 @@
     <Compile Include="Utility\AlbinoSpiderNestUtility.cs" />
     <Compile Include="Utility\AlbinoSpiderUtility.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="HediffComps\Properties\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
